@@ -1,0 +1,43 @@
+group_A:
+  common:
+    namespace: "dev-namespace"
+    replicas: 3
+    container_port: 8080
+    log_level: "DEBUG"
+    database_url: "jdbc:mysql://app1-db-url"
+    max_connections: 1000
+    api_version: 1117
+    app_name: "RCGEN"
+
+  rck8sparameters:
+    metadata_name: "app1"
+    services:
+      - "aservice"
+      - "auth_service"
+      # - "auth_service2"
+      - "auth2"
+
+  rajk8sparameters:
+    service_port: 80
+    service_type: "ClusterIP"
+  
+  deploymentparameters:
+    container_port: 9090
+
+group_B:
+  common:
+    namespace: "prod-namespace"
+    replicas: 5
+    container_port: 9090
+    log_level: "INFO"
+
+  deploymentparameters:
+    metadata_name: "app2"
+    app_name: "app2"
+    image: "app2-image:v2.0"
+    sidecar_name: "sidecar2"
+    sidecar_image: "sidecar2-image:v2.0"
+
+  serviceparameters:
+    service_port: 443
+    service_type: "LoadBalancer"

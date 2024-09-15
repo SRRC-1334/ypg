@@ -1,0 +1,9 @@
+api_version: '1117'
+database_url: jdbc:mysql://app1-db-url
+max_connections: '1000'
+rck8s_ns: dev-namespace
+rck8s_url: http://dev-namespace.world.dev.azure.net
+services:
+- aservice
+- auth_service
+- auth2

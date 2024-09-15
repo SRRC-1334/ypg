@@ -1,0 +1,7 @@
+apiVersion: apps/v1
+containerPort: '8080'
+image: ''
+kind: Deployment
+name: RCGEN
+rck8s_ns: dev-namespace
+rck8s_url: http://dev-namespace.world.dev.azure.net

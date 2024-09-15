@@ -1,0 +1,9 @@
+app: RCGEN
+containerPort: '8080'
+name: RCGEN
+namespace: dev-namespace
+rck8s_ns: dev-namespace
+rck8s_url: http://dev-namespace.world.dev.azure.net
+replicas: '3'
+service_port: 80
+service_type: ClusterIP

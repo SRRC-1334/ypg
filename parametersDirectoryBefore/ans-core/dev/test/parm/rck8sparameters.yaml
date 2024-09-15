@@ -1,0 +1,12 @@
+services:
+  - "aservice"
+  - "auth_service"
+  # - "auth_service2"
+  # - "auth2"
+  # - "service2"
+
+api_version: "{{api_version}}"
+max_connections: "{{max_connections}}"
+database_url: "{{database_url}}"
+rck8s_ns: "{{namespace}}"
+rck8s_url: "http://{{namespace}}.world.dev.azure.net"
